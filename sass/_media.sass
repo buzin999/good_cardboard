@@ -1,0 +1,527 @@
+@media (min-width: 3000px)
+  .form
+    &__input
+      flex-basis: 60%
+@media (max-width: 1200px)
+  .form
+    // height: 57px
+    &-title
+      padding-right: 87px
+      font-size: 18px
+      font-weight: 300
+      line-height: 30px
+      margin-bottom: 20px
+    &__input
+      flex-basis: 64%
+  .button
+    &_big
+      padding: 0px 22px
+  .main
+    padding-top: 25px
+    padding-bottom: 60px
+    &-img
+      position: relative
+      width: 400px
+      left: -25px
+      &::before
+        margin-left: -180px
+    &-text
+      &__title
+        font-size: 32px
+        font-weight: 700
+        margin-bottom: 19px
+      &__subtitle
+        margin-bottom: 27px
+        font-size: 20px
+        font-weight: 300
+      &__form
+        /* запись в sass: rgba(#fff, 0.2) или rgba(255, 255, 255, 0.2)
+          записаь в css: только rgba(255, 255, 255, 0.2)  */
+        background-color: rgba(#fff, 0.2)
+        padding: 30px 27px
+@media (max-width: 992px)
+  .hidden-mobile
+    display: none    
+  /* Блок шапки сайта */
+  .header
+    &-menu
+      width: 150px
+      margin: 0 auto
+      &__bg
+        display: none
+        background-color: rgba(55,55,55,.9)
+        width: 54%
+        left: -180vw
+        transform: translateX(-50%)
+        transition: all 0.2s
+        &_active
+          left: 50%
+      ul
+        height: 225px
+        flex-wrap: wrap
+        text-align: center
+      ul li
+        display: block 
+        cursor: pointer
+        border: none
+        flex-basis: 100%
+      &__a
+      padding-right: 0
+    &-bottom
+      padding-top: 0
+    &-logo
+      background: url(../img/header-logo.png) center no-repeat
+      width: 100px
+      height: 50px
+      background-size: 100%
+      display: inline-block
+    &-contacts
+      &__phone
+        &s
+          flex-direction: column
+        font-size: 14px
+        margin-right: 0
+        // padding-right: 13px
+      &__border
+        border: 0
+      &__button
+        padding: 7px
+  /* Модальное окно */
+  .popup
+    width: 670px
+    &-form
+      padding: 37px 88px 20px 88px
+      &-header
+        font-size: 26px
+        line-height: 24px
+        span
+          font-size: 22px
+      &__input
+        margin-bottom: 10px
+  /* Блок основной информации */
+  .main
+    text-align: center
+    padding-top: 50px
+    &::before
+      background-color: rgba(0, 0, 0, 0.7)
+    &-text
+      &__title
+        font-size: 25px
+        color: $active-color
+      &__subtitle
+        font-size: 21px
+        margin-bottom: 40px
+      &__form
+        background-color: transparent
+        padding: 0
+  /* Блок с формой из блока с основной информации */
+  .form
+    display: block
+    text-align: center
+    margin: 0 auto
+    &-title
+      margin-bottom: 16px
+      padding-right: 0
+      font-size: 18px
+      line-height: 1.4
+      &__important
+        margin-top: 10px
+    &__input
+      margin-bottom: 13px
+      padding: 17px 96px 17px 20px
+      margin-right: auto
+      margin-left: auto
+    &-small
+      font-size: 13px
+      margin-left: 0
+  .button
+    &_big
+      padding: 17px 29px
+      margin-bottom: 13px
+      margin-left: 10px
+  /* Блок с иконкой сворачивания */
+  .gamburger
+    display: inline-block
+  /* Блок с числами */
+  .numbers
+    &-block
+      width: 48%
+      vertical-align: middle
+      &__title
+        &sup
+          font-size: 18px
+      &__text
+        margin-bottom: 10px
+  /* Блок особенностей */
+  .features
+    &-block
+      flex-basis: 48%
+  /* Блок с продуктами */
+  .products
+    &-block
+      &__title
+        margin-bottom: 15px
+        min-height: 48px
+      &__img
+        margin-bottom: 19px
+        min-height: 250px
+  /* Блок Производство */
+  .production
+    &-text
+      margin-left: 0
+      &__title
+        text-align: center
+      &__descr
+        margin-bottom: 22px
+@media (max-width: 768px)
+  .button
+    &:hover
+      background-color: $active-color
+    &-o
+      &:hover
+        background-color: transparent
+        color: $text-color-dark
+        border: 1px solid rgba(#373737, 0.5)
+  .header
+    &-logo
+      background: $active-color url(../img/header-logo_mobile.png) center no-repeat
+      width: 35px
+      height: 35px
+      border-radius: 4px
+      display: inline-block
+    &-contacts
+      &_strong
+        font-weight: 900
+  .gamburger
+    margin-bottom: 2px
+  /* Модальное окно */
+  .popup
+    top: 80px
+    width: 485px
+    &-title
+      min-height: 55px
+      font-size: 18px
+      line-height: 55px
+    &-form
+      padding: 30px 40px 45px 40px
+      &-header
+        font-size: 24px
+        line-height: 24px
+        span
+          font-size: 22px
+      &__label
+        margin-top: 15px
+        margin-bottom: 15px
+        font-size: 18px
+      &__input
+        margin-bottom: 10px
+        width: 70%
+        height: 45px
+        font-size: 14px
+        text-align: center
+      &__btn
+        // width: 180px
+        height: 45px
+        line-height: 0
+        margin-left: 0
+      &__note
+        font-size: 12px
+  /* Блок с числами */
+  .numbers
+    &-block
+      display: block
+      width: 100%
+      &__title
+        font-size: 30px
+      // vertical-align: middle
+  /* Блок особенностей */
+  .features
+    &-block
+      padding: 28px 5px
+  /* Блок с продуктами */
+  .products
+    padding-bottom: 43px
+    &-block
+      &__title
+        margin-bottom: 15px
+        min-height: 48px
+      &__img
+        margin-bottom: 19px
+  /* Блок наши клиенты */
+  .customers
+    padding-bottom: 28px
+    &-block
+      flex-basis: 31%
+      margin-bottom: 7px
+  .color-off
+    display: none
+  .color
+    display: block
+  /* Блок Производство */
+  .production
+    padding:
+      top: 56px
+      bottom: 56px
+    &-slider
+      &_top
+        margin-bottom: 0
+        .slick-current
+          height: 380px !important
+      &_bottom
+        display: none
+    &-text
+      margin-left: 0
+      margin-top: 43px
+      text-align: center
+      &__title
+        position: absolute
+        left: -100%
+        right: -100%
+        // width: 100%
+        top: -28px
+        padding: 19px 81px
+        font-size: 20px
+        font-weight: 700
+        line-height: 18px
+      &__descr
+        margin-left: 0
+        margin-bottom: 22px
+        font-size: 14px
+        font-weight: 300
+        line-height: 18px
+        text-align-last: center
+        & p
+          text-align-last: center
+  .slider-arrow
+    &_prod
+      &-t
+        display: block
+    &_feedback
+      width: 22px
+      height: 79px
+      top: 50%
+      transform: translateY(-50%)
+      // display: none
+      &:hover
+        cursor: pointer
+      &__right
+        background: $active-color url(../img/arrow-right_active.png) center no-repeat
+        right: 10px
+      &__left
+        background: $active-color url(../img/arrow-left_active.png) center no-repeat
+        left: 10px
+  .feedback
+    &-slider
+      width: 290px
+      margin: 0 auto
+  /* Блок Предложение */
+  .offer
+    padding-top: 50px
+    padding-bottom: 52px
+    &-title
+      font-size: 20px
+      font-weight: 700
+      &_small
+        font-size: 16px
+        font-weight: 400
+        display: block
+    &-form
+      &__label
+        display: block
+        margin-bottom: 22px
+        font-size: 14px
+        font-weight: 300
+      &__input
+        display: block
+        margin: auto
+        margin-bottom: 13px
+        width: 100%
+        max-width: 290px
+        padding: 16px
+        font-size: 13px
+        border-radius: 4px
+        border: none        
+      &__button
+        margin-bottom: 9px
+        padding: 15px
+      &-small
+        font-size: 13px
+  /* Блок с картой */
+  .contacts
+    // padding-top: 36px
+    // padding-bottom: 14px
+    padding: 36px 15px 14px 15px
+    text-align: center
+    &-wrapper
+      position: relative
+      height: 100%
+      width: 100%
+    &-map
+      &_desctop
+        display: none
+      &_phone
+        display: block
+    &-block
+      position: relative
+      left: 0
+      top: 0
+      padding: 0 68px 28px 68px
+      font-size: 14px
+      font-weight: 300
+      line-height: 18px
+      &_h2
+        display: block
+      &__phone
+        margin-bottom: 15px
+      &__title
+        &:first-child
+          &::before
+            display: none
+        &-phone
+          &::before
+            display: none
+        &-mail
+          margin-top: 21px
+          &::before
+            display: none
+@media (max-width: 576px)
+  .hidden-mobile
+    display: none
+  .header-menu__bg
+    display: none
+  .header
+    &-logo
+      background: $active-color url(../img/header-logo_mobile.png) center no-repeat
+      width: 35px
+      height: 35px
+      border-radius: 4px
+      display: inline-block
+    &-contacts
+      &__phone
+        &s
+          flex-direction: column
+        font-size: 14px
+        margin-right: 0
+        // padding-right: 13px
+      &__border
+        border: 0
+      &__button
+        padding: 7px
+  /* Модальное окно */
+  .popup
+    top: 80px
+    width: 300px
+    &-close
+      right: 4px
+      top: -12px
+    &-form
+      padding: 30px 5px 30px 5px
+      &-header
+        font-size: 20px
+        line-height: 22px
+        span
+          font-size: 18px
+      &__label
+        font-size: 17px
+      &__input
+        width: 85%
+        padding-left: 0
+      &__btn
+        height: 45px
+      &__note
+        font-size: 13px
+  .main
+    text-align: center
+    padding-top: 50px
+    &::before
+      background-color: rgba(0, 0, 0, 0.7)
+    &-text
+      &__title
+        font-size: 22px
+        color: $active-color
+      &__subtitle
+        font-size: 18px
+        margin-bottom: 40px
+      &__form
+        background-color: transparent
+        padding: 0
+  .form
+    display: block
+    text-align: center
+    &-title
+      margin-bottom: 16px
+      padding-right: 0
+      font-size: 15px
+      line-height: 1.4
+      &__important
+        margin-top: 10px
+    &__input
+      display: block
+      margin-bottom: 13px
+      padding: 17px 58px
+      margin-right: auto
+      margin-left: auto
+    &-small
+      font-size: 13px
+      margin-left: 0
+  .button
+    &_big
+      padding: 19px 29px
+  //Значок вместо меню
+  .gamburger
+    &-span, &-span::before, &-span::after
+      top: 50%
+      margin-top: -1.5px
+      left: 50%
+      margin-left: -11.5px
+      height: 3px
+      width: 23px
+    &-span::before
+      // transform: translateY(-8px)
+      margin-top: -8px
+    &-span::after
+      // transform: translateY(6px)
+      margin-top: 4px
+  /* Блок с продуктами */
+  .products
+    &-block
+      &__title
+        margin-bottom: 15px
+        min-height: 48px
+      &__img
+        margin-bottom: 19px
+        max-height: 243px
+        min-height: 0
+      &__button
+        // display: block
+        margin-bottom: 10px
+        margin-right: 3px
+  /* Блок особенностей */
+  .features
+    &-block
+      flex-direction: row
+      text-align: left
+      flex-basis: 100%
+      height: 113px
+      margin-bottom: 8px
+      padding: 22px 16px 24px 13px
+  .features-blocks
+    justify-content: center
+  .section
+    &-title
+      font-size: 22px
+      &::after
+        content: none
+  /* Блок наши клиенты */
+  .customers
+    &-block
+      flex-basis: 49%
+      min-height: 87px
+      img
+        max-height: 57px
+  .section
+    &-title
+      margin-bottom: 18px
+  .contacts
+    &-block
+      padding: 0 0 28px 0

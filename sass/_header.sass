@@ -1,0 +1,113 @@
+.header
+  &-none
+    display: none
+  &-bottom
+    padding-top: 44px
+  &-logo
+    background: url(../img/header-logo.png) center no-repeat
+    background-size: 100%
+    width: 191px
+    height: 61px
+  padding-bottom: 15px
+  &-menu
+    padding-top: 10px
+    padding-bottom: 9px
+    &__bg
+      background-color: #373737
+      width: 100%
+      min-height: 44px
+      position: fixed
+      z-index: 5000
+      &_active
+        left: 0
+    ul
+      display: flex
+      justify-content: space-between
+      list-style: none
+      align-items: center
+      height: 25px
+      margin: 0
+      padding: 0
+    ul li
+      display: inline-block 
+      cursor: pointer
+      border-right: 1px dotted #5f5f5f
+    ul li:last-child
+      border: none
+    ul li a 
+      text-align: center      
+      font-size: 12px
+      font-weight: 400
+      text-transform: uppercase
+    &__a
+      padding-right: 0
+  &-logo
+    margin-top: 15px
+  &-contacts
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-top: 14px
+    a
+      color: $text-color-dark
+    &__phone
+      &s
+        display: flex
+      font-size: 22px
+      margin-right: 13px
+      padding-right: 13px
+    &__border
+      border-right: 1px solid #cfcfd0
+/* Блок с иконкой сворачивания */
+.gamburger
+  display: none
+  margin-bottom: 10px
+  margin-right: 10px
+  z-index: 9999
+  &-btn
+    display: block
+    position: relative
+    width: 25px
+    height: 28px
+    &_active
+      span
+        background: transparent
+        &::before
+          transform: rotate(135deg)
+          margin-top: 0
+        &::after
+          transform: rotate(-135deg)
+          margin-top: 0
+  &-span, &-span::before, &-span::after
+    display: block
+    position: absolute
+    top: 50%
+    margin-top: -2px
+    left: 50%
+    margin-left: -13px
+    height: 4px
+    width: 26px
+    background-color: $text-color-dark
+  &-span::before, &-span::after
+    content: ''
+    transition: all 0.2s
+  &-span::before
+    // transform: translateY(-10px)
+    margin-top: -9px
+  &-span::after
+    // transform: translateY(7px)
+    margin-top: 5px
+
+@keyframes move
+  from
+    opacity: 0
+    margin-bottom: -100px
+  to
+    opacity: 1
+    margin-bottom: 0
+    transform: rotate(90deg)
+
+.animate
+  animation-name: move
+  animation-duration: 1s
+  animation-delay: 0.4s

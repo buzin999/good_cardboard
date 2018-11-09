@@ -1,0 +1,23 @@
+.customers
+  padding-bottom: 61px
+  &-blocks
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &-block
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-basis: 23%
+    margin-bottom: 33px
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    min-height: 130px
+    border-radius: 3px
+    cursor: pointer
+    &:hover
+      .color-off
+        display: none
+      .color
+        display: block
+.color
+  display: none

@@ -1,0 +1,99 @@
+.section
+  &-title
+    font-size: 27px
+    font-weight: 700
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 29px
+    margin-top: 0
+    &::after
+      content: ''
+      display: block
+      margin-top: 12px
+      height: 6px
+      background: url(../img/line.png) center no-repeat
+.button
+  font-size: 14px
+  background-color: $active-color
+  font-family: 'Roboto', sans-serif
+  border: 1px solid transparent
+  color: $text-color-light
+  padding: 13px 24px
+  border-radius: 5px
+  &:hover
+    background-color: lighten($active-color, 5)
+    cursor: pointer
+  &-o
+    background-color: transparent
+    color: $text-color-dark
+    border: 1px solid rgba(#373737, 0.5)
+    &:hover
+      background-color: darken(#ffffff, 40)
+      color: $text-color-light
+      border: 1px solid transparent
+      // cursor: pointer
+  img
+    vertical-align: middle
+  &_big
+    padding-top: 20px
+    padding-bottom: 20px
+    vertical-align: middle
+.slider-arrow
+  position: absolute
+  z-index: 99
+  height: 100%
+  &_prod
+    border: 1px solid $active-color
+    width: 22px
+    top: 0
+    &:hover
+      cursor: pointer
+    &__right
+      background: #fff url(../img/arrow-right.png) center no-repeat
+      right: 0
+      &:hover
+        background: $active-color url(../img/arrow-right_active.png) center no-repeat
+    &__left
+      background: #fff url(../img/arrow-left.png) center no-repeat
+      left: 0
+      &:hover
+        background: $active-color url(../img/arrow-left_active.png) center no-repeat
+    &-t
+      width: 22px
+      height: 79px
+      top: 50%
+      transform: translateY(-50%)
+      display: none
+      &:hover
+        cursor: pointer
+      &__right
+        background: $active-color url(../img/arrow-right_active.png) center no-repeat
+        right: 0
+      &__left
+        background: $active-color url(../img/arrow-left_active.png) center no-repeat
+        left: 0
+  &_feedback
+    top: 0
+    width: 10px
+    &:hover
+      cursor: pointer
+    &__right
+      background: url(../img/feedback/arrow-right_feedback.png) center no-repeat
+      right: 0
+    &__left
+      background: url(../img/feedback/arrow-left_feedback.png) center no-repeat
+      left: 0
+.dark-bg
+  position: relative
+  z-index: 2
+  /* Затемнение фонового изображения на главном экране */
+  &::before
+    position: absolute
+    content: ''
+    display: block
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.6)
+    z-index: -1

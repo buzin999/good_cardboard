@@ -1,0 +1,82 @@
+.contacts
+  // padding-top: 73px
+  // padding-bottom: 87px
+  position: relative
+  &-wrapper
+    position: absolute
+    height: 550px
+    width: 350px
+  &-map
+    &_desctop
+      display: block
+    &_phone
+      display: none
+  &-block
+    position: absolute
+    z-index: 999
+    top: 11%
+    left: 3%
+    background-color: #fff
+    padding: 20px 40px 39px 62px
+    font-size: 16px
+    font-weight: 300
+    line-height: 18px
+    &__a
+      color: #373737
+      &:hover
+        cursor: pointer
+    &_h2
+      text-transform: uppercase
+      font-size: 22px
+      font-weight: 700
+      line-height: 24px
+      margin-bottom: 7px
+      margin-top: 0
+      display: none
+    &__phone
+      margin-bottom: 14px
+    &__title, &__title-phone, &__title-mail
+      display: block
+      font-size: 18px
+      font-weight: 700
+      margin-bottom: 8px
+      margin-top: 13px
+      position: relative
+    &__title
+      &:first-child
+        &::before
+          content: ''
+          position: absolute
+          z-index: 9999
+          width: 30px
+          height: 250px
+          background: url(../img/contacts/map-marker.png) no-repeat
+          left: -14%
+          top: 0
+      &-phone
+        margin-top: 31px
+        line-height: 18px
+        &-first
+          display: block
+          margin-bottom: 7px
+          z-index: 9999
+        &::before
+          content: ''
+          position: absolute
+          z-index: 9999
+          width: 15px
+          height: 22px
+          background: url(../img/contacts/map-tel1.png) no-repeat
+          left: -14%
+          top: 0
+      &-mail
+        margin-top: 25px
+        &::before
+          content: ''
+          position: absolute
+          z-index: 9999
+          width: 20px
+          height: 14px
+          background: url(../img/contacts/map-mail.png) no-repeat
+          left: -14%
+          top: 19%
